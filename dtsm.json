@@ -1,0 +1,66 @@
+{
+  "repos": [
+    {
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "ref": "master"
+    }
+  ],
+  "path": "typings",
+  "bundle": "typings/bundle.d.ts",
+  "link": {
+    "npm": {
+      "include": true
+    }
+  },
+  "dependencies": {
+    "node/node.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "express/express.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "body-parser/body-parser.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "cookie-parser/cookie-parser.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "morgan/morgan.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "serve-favicon/serve-favicon.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "debug/debug.d.ts": {
+      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+    },
+    "ect/ect.d.ts": {
+      "repo": "https://gist.github.com/c5c0eca488b46054ee33c16b0c967be4.git",
+      "ref": "321165f17af0252bdfba7203cb16c1d6f4539212",
+      "path": "ect.d.ts"
+    },
+    "socket.io/socket.io.d.ts": {
+      "ref": "603545ca2068c895bf7ed9d9b30f300118d88b9f"
+    },
+    "socket.io-client/socket.io-client.d.ts": {
+      "ref": "603545ca2068c895bf7ed9d9b30f300118d88b9f"
+    },
+    "react/react.d.ts": {
+      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+    },
+    "react/react-dom.d.ts": {
+      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+    },
+    "react-tap-event-plugin/react-tap-event-plugin.d.ts": {
+      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+    },
+    "material-ui/material-ui.d.ts": {
+      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+    },
+    "niconico-desktop/niconico-desktop.d.ts": {
+      "repo": "https://gist.github.com/yasupeke/2e4c993841f435fa2f510955f557a4f3",
+      "ref": "cdaff0c47fc721f42c4acd98397fa855be37f5c5",
+      "path": "niconico-desktop.d.ts"
+    }
+  }
+}
