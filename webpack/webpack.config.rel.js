@@ -1,5 +1,5 @@
 const path = require('path');
-const closureCompilerPlugin = require('webpack-closure-compiler');
+const webpack = require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, '..', 'src', 'client', 'app.tsx'),
@@ -17,13 +17,15 @@ module.exports = {
         ]
     },
     plugins: [
-        new closureCompilerPlugin({
-          compiler: {
-            language_in: 'ECMASCRIPT6',
-            language_out: 'ECMASCRIPT5',
-            compilation_level: 'ADVANCED'
-          },
-          concurrency: 3,
+        new webpack.DefinePlugin({
+            "process.env": { 
+                NODE_ENV: JSON.stringify("production") 
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
         })
     ],
     devtool: 'source-map'
