@@ -4,10 +4,10 @@ import * as SocketIO from 'socket.io';
 export default (server: Http.Server) => {
     var io = SocketIO.listen(server); 
     io.on('connection', (socket: SocketIO.Socket) => {
-        console.log('connected'); 
+        //console.log('connected'); 
 
         socket.on('join', (roomId: string) => {
-            console.log('join: ', roomId);
+            //console.log('join: ', roomId);
             socket.join(roomId);
 
             //自分のみ
@@ -15,8 +15,16 @@ export default (server: Http.Server) => {
         });
 
         socket.on('send', (comment: NicoNicoDesktop.IComment) => {
-            console.log(comment);
+            //console.log(comment);
             io.to(comment.roomId).emit('flowing', comment);
+        });
+
+        socket.on('leave', (roomId: string) => {
+            //console.log('leave: ', roomId);
+            socket.leave(roomId);
+
+            //自分のみ
+            io.to(socket.id).emit('leave');
         });
     });
 };
