@@ -3,6 +3,7 @@ import { Slider } from 'material-ui';
 import { AvFastForward } from 'material-ui/svg-icons';
 
 interface IProps extends React.Props<{}> {
+    disabled: boolean;
 }
 
 interface IState {
@@ -61,6 +62,7 @@ export default class SelectSpeed extends React.Component<IProps, IState> {
                     defaultValue={this.state.speed}
                     onChange={this.handleChange.bind(this)}
                     style={sliderStyles}
+                    disabled={this.props.disabled}
                 />
             </div>
         );

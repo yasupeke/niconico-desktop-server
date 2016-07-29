@@ -3,6 +3,8 @@ import * as ReactDom from 'react-dom';
 import { Snackbar } from 'material-ui';
 import ButtonGood from '../components/button-good';
 import ButtonBad from '../components/button-bad';
+import ButtonWWW from '../components/button-www';
+import Button8888 from '../components/button-8888';
 import InputJoin from '../components/input-join';
 import InputComment from '../components/input-comment';
 import SelectColor from '../components/select-color';
@@ -36,11 +38,12 @@ export default class Input extends React.Component<IProps, void> {
     }
 
     private send(comment: string): void {
+        const colors = (this.refs['color'] as SelectColor).getColor();
         this.props.onSend({
             roomId: (this.refs['roomid'] as InputJoin).getRoomId(),
             comment: comment,
-            image: null,
-            color: (this.refs['color'] as SelectColor).getColor(),
+            color: colors.color,
+            shadowColor: colors.shadowColor,
             size: (this.refs['size'] as SelectSize).getSize(),
             speed: (this.refs['speed'] as SelectSpeed).getSpeed()
         });
@@ -51,6 +54,7 @@ export default class Input extends React.Component<IProps, void> {
     }
 
     public render(): React.ReactElement<void> {
+        const disabled = this.props.status === NicoNicoDesktop.RoomStatus.Logout;
         return (
             <div>
                 <InputJoin
@@ -59,22 +63,42 @@ export default class Input extends React.Component<IProps, void> {
                     onJoin={this.handleJoin.bind(this)}
                     onLeave={this.handleLeave.bind(this)}
                 />
+                <InputComment
+                    onSend={this.handleSend.bind(this)}
+                    disabled={disabled}
+                />
                 <div
                     style={buttonWrapperStyles}
                 >
                     <ButtonGood
                         onTap={this.handleSend.bind(this)}
+                        disabled={disabled}
                     />
                     <ButtonBad
                         onTap={this.handleSend.bind(this)}
+                        disabled={disabled}
+                    />
+                    <ButtonWWW
+                        onTap={this.handleSend.bind(this)}
+                        disabled={disabled}
+                    />
+                    <Button8888
+                        onTap={this.handleSend.bind(this)}
+                        disabled={disabled}
                     />
                 </div>
-                <InputComment
-                    onSend={this.handleSend.bind(this)}
+                <SelectColor
+                    ref="color"
+                    disabled={disabled}
                 />
-                <SelectColor ref="color" />
-                <SelectSize ref="size" />
-                <SelectSpeed ref="speed" />
+                <SelectSize
+                    ref="size"
+                    disabled={disabled}
+                />
+                <SelectSpeed
+                    ref="speed"
+                    disabled={disabled}
+                />
             </div>
         );
     }

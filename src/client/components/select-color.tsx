@@ -3,6 +3,7 @@ import { RadioButton, RadioButtonGroup } from 'material-ui';
 import { ActionInvertColors } from 'material-ui/svg-icons';
 
 interface IProps extends React.Props<{}> {
+    disabled: boolean;
 }
 
 const wrapperStyles = {
@@ -20,9 +21,13 @@ export default class SelectColor extends React.Component<IProps, void> {
         super(props);
     }
 
-    public getColor(): string {
+    public getColor(): { color: string, shadowColor: string } {
         const group = this.refs['selectColor'] as RadioButtonGroup;
-        return group.getSelectedValue();
+        const colors = group.getSelectedValue().split(',');
+        return {
+            color: colors[0],
+            shadowColor: colors[1]
+        };
     }
 
     public render(): React.ReactElement<void> {
@@ -30,18 +35,26 @@ export default class SelectColor extends React.Component<IProps, void> {
             <RadioButtonGroup
                 ref="selectColor"
                 name="color"
-                defaultSelected="#000000"
+                defaultSelected="#000000,#ffffff"
                 style={wrapperStyles}
             >
                 <RadioButton
-                    value="#000000"
+                    value="#000000,#ffffff"
                     label="Black"
                     style={radioStyles}
+                    disabled={this.props.disabled}
                 />
                 <RadioButton
-                    value="#ff0000"
+                    value="#ff0000,#ffffff"
                     label="Red"
                     style={radioStyles}
+                    disabled={this.props.disabled}
+                />
+                <RadioButton
+                    value="#ffffff,#000000"
+                    label="White"
+                    style={radioStyles}
+                    disabled={this.props.disabled}
                 />
             </RadioButtonGroup>
         );

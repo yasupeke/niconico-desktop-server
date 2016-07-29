@@ -3,6 +3,7 @@ import { RaisedButton , FontIcon } from 'material-ui';
 import { SocialMood } from 'material-ui/svg-icons';
 
 interface IProps extends React.Props<{}> {
+    disabled: boolean;
     onTap(good: string): void;
 }
 
@@ -35,7 +36,7 @@ export default class ButtonGood extends React.Component<IProps, IState> {
             <RaisedButton 
                 icon={<SocialMood />}
                 onTouchTap={this.handleTap.bind(this)}
-                disabled={this.state.disabled}
+                disabled={this.props.disabled || this.state.disabled}
             />
         );
     }
