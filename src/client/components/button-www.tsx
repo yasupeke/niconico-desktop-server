@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { RaisedButton , FontIcon } from 'material-ui';
-import { SocialMoodBad } from 'material-ui/svg-icons';
 
 interface IProps extends React.Props<{}> {
+    disabled: boolean;
     onTap(good: string): void;
 }
 
@@ -10,7 +10,7 @@ interface IState {
     disabled: boolean;
 }
 
-export default class ButtonSad extends React.Component<IProps, IState> {
+export default class ButtonWWW extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
@@ -19,7 +19,7 @@ export default class ButtonSad extends React.Component<IProps, IState> {
     }
 
     public handleTap(): void {
-        this.props.onTap('(・A・)ｲｸﾅｲ!!');
+        this.props.onTap('www');
         this.setState({
             disabled: true
         });
@@ -33,9 +33,9 @@ export default class ButtonSad extends React.Component<IProps, IState> {
     public render(): React.ReactElement<void> {
         return (
             <RaisedButton 
-                icon={<SocialMoodBad />}
+                label="www"
                 onTouchTap={this.handleTap.bind(this)}
-                disabled={this.state.disabled}
+                disabled={this.props.disabled || this.state.disabled}
             />
         );
     }
