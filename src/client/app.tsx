@@ -5,7 +5,7 @@ import * as injectTapEventPlugin from 'react-tap-event-plugin';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import Input from './containers/input';
 
-const socket = SocketIO('http://localhost:3000');
+const socket = SocketIO(location.origin);
 
 function onJoin(roomId: string): void {
     socket.emit('join', roomId);
@@ -36,10 +36,15 @@ function render(status: NicoNicoDesktop.RoomStatus): void {
 injectTapEventPlugin();
 
 socket.on('connect', () => {
-    console.log('connected');
+    console.info('connected');
     render(NicoNicoDesktop.RoomStatus.Logout);
 });
 
 socket.on('join', () => {
     render(NicoNicoDesktop.RoomStatus.Login);
+});
+
+socket.on('leave', () => {
+    console.info('leave');
+    render(NicoNicoDesktop.RoomStatus.Logout);
 });
