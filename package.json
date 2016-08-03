@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "setup": "npm install & dtsm install",
+    "setup": "npm install --no-optional & dtsm install",
     "copy:views": "cpx \"./src/server/views/**/*.*\" \"./dist/server/views/\"",
     "tsc": "tsc --rootDir ./src --outDir ./dist",
     "webpack:dev": "webpack --config ./webpack/webpack.config.dev.js",
     "webpack:rel": "webpack --config ./webpack/webpack.config.rel.js",
     "build:dev": "npm run tsc && npm run webpack:dev & npm run copy:views",
-    "build:rel": "npm run tsc & npm run webpack:rel & npm run copy:views",
+    "build:rel": "npm run tsc && npm run webpack:rel && npm run copy:views",
     "start:dev": "node-dev ./dist/server/bin/www.js",
     "start": "node ./dist/server/bin/www.js"
   },
