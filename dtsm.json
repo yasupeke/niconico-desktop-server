@@ -14,25 +14,25 @@
   },
   "dependencies": {
     "node/node.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "express/express.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "body-parser/body-parser.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "cookie-parser/cookie-parser.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "morgan/morgan.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "serve-favicon/serve-favicon.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "debug/debug.d.ts": {
-      "ref": "0b93b227096c469270d169340a77a76ba8932be8"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "ect/ect.d.ts": {
       "repo": "https://gist.github.com/c5c0eca488b46054ee33c16b0c967be4.git",
@@ -40,26 +40,26 @@
       "path": "ect.d.ts"
     },
     "socket.io/socket.io.d.ts": {
-      "ref": "603545ca2068c895bf7ed9d9b30f300118d88b9f"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "socket.io-client/socket.io-client.d.ts": {
-      "ref": "603545ca2068c895bf7ed9d9b30f300118d88b9f"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "react/react.d.ts": {
-      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "react/react-dom.d.ts": {
-      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "react-tap-event-plugin/react-tap-event-plugin.d.ts": {
-      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "material-ui/material-ui.d.ts": {
-      "ref": "b66d6115d7a8cd74af45e59d36c4447e5d1e9a52"
+      "ref": "07378f4a20ef709de8aea9507144fcf48c38897d"
     },
     "niconico-desktop/niconico-desktop.d.ts": {
       "repo": "https://gist.github.com/yasupeke/2e4c993841f435fa2f510955f557a4f3",
-      "ref": "cdaff0c47fc721f42c4acd98397fa855be37f5c5",
+      "ref": "f6804f75ad1d540bb3cbc622105513757774f17b",
       "path": "niconico-desktop.d.ts"
     }
   }
