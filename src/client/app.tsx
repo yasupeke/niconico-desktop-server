@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import * as injectTapEventPlugin from 'react-tap-event-plugin';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
-import Input from './containers/input';
+import Input from '../views/containers/input';
 
 const socket = SocketIO(location.origin);
 
