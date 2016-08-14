@@ -34,6 +34,7 @@ export default class Layout extends React.Component<IProps, void> {
             <html lang="en">
                 <head>
                     <meta charset="UTF-8" />
+                    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width" />
                     <title>Comment</title>
                     {this.styles}
                     {this.preScripts}
